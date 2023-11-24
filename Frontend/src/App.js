@@ -8,6 +8,7 @@ import Organizer from './components/Organizer';
 import Footer from './components/Footer';
 import { createContext, useState } from 'react';
 export const ThemeContext  = createContext("")
+import UsersDisplay from './components/UsersDisplay';
 
 function App() {
   const [dark, setdark] = useState("");
@@ -32,6 +33,7 @@ function App() {
         </div>
         </div>
         </ThemeContext.Provider>
+        <UsersDisplay />
     </BrowserRouter>
 
   );
