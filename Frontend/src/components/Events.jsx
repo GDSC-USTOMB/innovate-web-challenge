@@ -1,12 +1,13 @@
 import React, { useContext } from 'react'
 import {event} from "../eventData"
 import { ThemeContext } from '../App'
+
 function Events() {
 
    const dark =  useContext(ThemeContext)
   return (
-    <div style={{ backgroundColor : dark ? "black" : "", color: dark ? "white" : "" }} >
-        <h2 style={{  backgroundColor : dark ? "black" : "", color: dark ? "white" :"#29153d" }} >Past Event</h2>
+    <div class="events" style={{ backgroundColor : dark ? "#1a1a1a" : "", color: dark ? "white" : "" }} >
+        <h2 style={{  backgroundColor : dark ? "#1a1a1a" : "", color: dark ? "white" :"#29153d" }} >Past Event</h2>
         <div class="row">
         {
             event.map(i=>
@@ -14,9 +15,9 @@ function Events() {
                         <img style={{ borderRadius: "50%" }} width="150" src={i.img} />
                         <div class="squre text-center">
                             <p class=" mt-4">{i.date}</p>
-                            <p class="fw-bolder" style={{ backgroundColor : dark ? "black" : "", color: dark ? "white" : "#29153d" }}>{i.type}</p>
-                            <div style={{ fontSize:"17px", backgroundColor : dark ? "black" : "", color: dark ? "white" :  "rgb(95, 99, 104)" }} class="text-decoration-underline mt-2">{i.categrie}</div>
-                            <div style={{ fontSize:"16px", backgroundColor : dark ? "black" : "", color: dark ? "white" :"rgb(95, 99, 104)" }} class="mt-2" >Université des Sciences et de la Technologie d'Oran - Mohamed Boudiaf USTOMB</div>
+                            <p class="fw-bolder" style={{ backgroundColor : dark ? "#1a1a1a" : "", color: dark ? "white" : "#29153d" }}>{i.name}</p>
+                            <div style={{ fontSize:"17px", backgroundColor : dark ? "#1a1a1a" : "", color: dark ? "white" :  "rgb(95, 99, 104)" }} class="text-decoration-underline mt-2">{i.categorie}</div>
+                            <div style={{ fontSize:"16px", backgroundColor : dark ? "#1a1a1a" : "", color: dark ? "white" :"rgb(95, 99, 104)" }} class="mt-2" >Université des Sciences et de la Technologie d'Oran - Mohamed Boudiaf USTOMB</div>
                         </div>
                     </div>
                 )

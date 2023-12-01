@@ -6,7 +6,7 @@ const UsersDisplay = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost/innovate-web-challenge-team1/Backend/api.php')
+        fetch('https://dry-wildwood-28904-df7e179af0c5.herokuapp.com/api.php')
             .then(response => response.json())
             .then(data => {
                 setUsers(data);
